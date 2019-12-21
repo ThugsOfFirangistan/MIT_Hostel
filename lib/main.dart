@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:mit_hostel/signin.dart';
+import 'package:mit_hostel/BookRoom.dart';
+import 'package:mit_hostel/GuestSignIn.dart';
+import 'package:mit_hostel/Payment.dart';
+import 'package:mit_hostel/onBoarding.dart';
+import 'package:mit_hostel/UserSignIn.dart';
 
 void main() => runApp(MyApp());
 
@@ -7,7 +11,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: SignIn(),
+      home: OnBoarding(),
+      routes: {
+        '/signin': (context) => UserSignIn(),
+        '/guest': (context) => GuestSignIn(),
+        '/bookroom': (context) => BookRoom(),
+        '/payment': (context) => Payment()
+      },
     );
   }
 }

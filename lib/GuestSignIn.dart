@@ -29,11 +29,11 @@ class GuestSignIn extends StatelessWidget {
                     contentPadding:
                         EdgeInsets.symmetric(vertical: 15, horizontal: 10),
                     border: InputBorder.none,
-                    hintText: 'Access Key',
+                    hintText: 'Activation Code',
                     hintStyle: TextStyle(color: Colors.black)),
               ),
             ),
-            SizedBox(height: 15),
+            Spacer(),
             MitButton(
               buttonColor: Colors.black,
               border: null,
@@ -43,16 +43,15 @@ class GuestSignIn extends StatelessWidget {
               textColor: Colors.white,
             ),
             SizedBox(
-              height: 0.3 * MediaQuery.of(context).size.height,
+              height: 0.05 * MediaQuery.of(context).size.height,
             ),
-            Text(
-              "Guest Login",
-              style: TextStyle(
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
-                fontSize: 25,
-              ),
-            ),
+            Text("Guest Login",
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 25,
+              fontWeight: FontWeight.w400
+            ),),
+            SizedBox(height: 20,)
           ],
         ),
       ),

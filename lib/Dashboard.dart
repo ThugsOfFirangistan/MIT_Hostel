@@ -11,13 +11,13 @@ class _DashboardState extends State<Dashboard> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Homepage"),
+          title: Text("MIT Hostel"),
           backgroundColor: Colors.black,
         ),
         drawer: drawerHome,
         body: SafeArea(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Container(
                 padding: EdgeInsets.all(20),
@@ -38,6 +38,88 @@ class _DashboardState extends State<Dashboard> {
                         fontSize: 35,
                         fontWeight: FontWeight.w600),
                   )),
+                  Card(
+                    elevation: 5,
+                    child: Container(
+                      padding: EdgeInsets.all(20),
+                      width: 0.9 * MediaQuery.of(context).size.width,
+                      height: 0.4 * MediaQuery.of(context).size.height,
+                      child: Column(
+                        children: <Widget>[
+                          Text("Today's Menu", style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),),
+                        ],
+                      ),
+                    ),
+                  ),
+              Spacer(),
+              Card(
+                  elevation: 10,
+                  child: Column(
+                    children: <Widget>[
+                      Container(
+                        padding: EdgeInsets.only(top: 10),
+                        child: Text(
+                          "Quick Services",
+                          style: TextStyle(
+                              fontSize: 25, fontWeight: FontWeight.w400),
+                        ),
+                      ),
+                      Container(
+                        height: 150.0,
+                        padding:
+                            EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: <Widget>[
+                            Card(
+                              child: Column(
+                                children: <Widget>[
+                                  Icon(
+                                Icons.local_laundry_service,
+                                size: 80,
+                              ),
+                              Text("Laundry")
+                                ],
+                              )
+                            ),
+                            Card(
+                              child: Column(
+                                children: <Widget>[
+                                  Icon(
+                                Icons.data_usage,
+                                size: 80,
+                              ),
+                              Text("Buy Data")
+                                ],
+                              )
+                            ),
+                            Card(
+                              child: Column(
+                                children: <Widget>[
+                                  Icon(
+                                Icons.build,
+                                size: 80,
+                              ),
+                              Text("Plumbing")
+                                ],
+                              )
+                            ),
+                            Card(
+                              child: Column(
+                                children: <Widget>[
+                                  Icon(
+                                Icons.highlight,
+                                size: 80,
+                              ),
+                              Text("Electicity")
+                                ],
+                              )
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ))
             ],
           ),
         ),

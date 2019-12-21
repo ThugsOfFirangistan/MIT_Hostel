@@ -1,6 +1,8 @@
 import "package:flutter/material.dart";
 import 'package:mit_hostel/GuestSignIn.dart';
+import 'package:mit_hostel/GuestSignUp.dart';
 import 'package:mit_hostel/MitButton.dart';
+import 'package:mit_hostel/Otp.dart';
 import 'package:mit_hostel/UserSignIn.dart';
 
 class OnBoarding extends StatelessWidget {
@@ -44,17 +46,44 @@ class OnBoarding extends StatelessWidget {
                     width: MediaQuery.of(context).size.width / 2.3,
                   ),
                   SizedBox(
-                    height: 11,
+                    height: 15,
                   ),
-                  MitButton(
-                    buttonColor: Colors.transparent,
-                    border: Border.all(
-                      color: Colors.white,
-                    ),
-                    textColor: Colors.white,
-                    buttonText: 'Guest',
-                    onTap: GuestSignIn(),
-                    width: MediaQuery.of(context).size.width / 2.3,
+                  Text(
+                    "Guest",
+                    style: TextStyle(color: Colors.white, fontSize: 25),
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      MitButton(
+                        buttonColor: Colors.transparent,
+                        border: Border.all(
+                          color: Colors.white,
+                        ),
+                        textColor: Colors.white,
+                        buttonText: 'Sign In',
+                        onTap: GuestSignIn(),
+                        width: MediaQuery.of(context).size.width / 4,
+                      ),
+                      Container(
+                        width: 2,
+                        color: Colors.white,
+                        height: 45,
+                      ),
+                      MitButton(
+                        buttonColor: Colors.transparent,
+                        border: Border.all(
+                          color: Colors.white,
+                        ),
+                        textColor: Colors.white,
+                        buttonText: 'Sign Up',
+                        onTap: Otp(),
+                        width: MediaQuery.of(context).size.width / 4,
+                      ),
+                    ],
                   ),
                   Spacer(),
                 ],

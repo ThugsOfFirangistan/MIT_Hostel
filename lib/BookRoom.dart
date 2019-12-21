@@ -73,6 +73,51 @@ class _BookRoomState extends State<BookRoom> {
                   }).toList(),
                 ),
               ),
+              Container(
+                padding: EdgeInsets.only(top: 20),
+                child: Card(
+                  child: Column(
+                    children: <Widget>[
+                      Text(
+                        "Payment Estimate",
+                        style: TextStyle(
+                            fontSize: 25, fontWeight: FontWeight.w600),
+                      ),
+                      SizedBox(height: 10),
+                      Container(
+                          width: 0.7 * MediaQuery.of(context).size.width,
+                          child: Row(
+                            children: <Widget>[
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text("Hostel Fee", style: TextStyle(fontSize: 20),),
+                                  Text("Refundable Deposit", style: TextStyle(fontSize: 20)),
+                                  Text("Total", style: TextStyle(fontSize: 20))
+                                ],
+                              ),
+                              Column(
+                                children: <Widget>[
+                                  Container(width: 80,)
+                                ],
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: <Widget>[
+                                  Text("Here"),
+                                  Text("Here"),
+                                  Text("Here")
+                                ],
+                              ),
+                            ],
+                          )),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 100,
+              ),
               MitButton(
                 buttonColor: Colors.transparent,
                 border: Border.all(

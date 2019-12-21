@@ -8,8 +8,9 @@ class BookRoom extends StatefulWidget {
 }
 
 class _BookRoomState extends State<BookRoom> {
-  String defacValue = 'Air Conditioning';
+  String defacValue = 'Room Type';
   String defocValue = 'Preferred Occupancy';
+  String virtualDiv = '-----------------------';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -27,7 +28,7 @@ class _BookRoomState extends State<BookRoom> {
                 ),
               ),
               Container(
-                padding: EdgeInsets.all(50),
+                padding: EdgeInsets.all(25),
                 child: DropdownButton<String>(
                   value: defocValue,
                   iconSize: 24,
@@ -38,8 +39,12 @@ class _BookRoomState extends State<BookRoom> {
                       defocValue = newValue;
                     });
                   },
-                  items: <String>['Preferred Occupancy', 'Single', 'Double']
-                      .map<DropdownMenuItem<String>>((String value) {
+                  items: <String>[
+                    'Preferred Occupancy',
+                    virtualDiv,
+                    'Single',
+                    'Double'
+                  ].map<DropdownMenuItem<String>>((String value) {
                     return DropdownMenuItem<String>(
                       value: value,
                       child: Text(value),
@@ -48,7 +53,7 @@ class _BookRoomState extends State<BookRoom> {
                 ),
               ),
               Container(
-                padding: EdgeInsets.only(top: 50, bottom: 120),
+                padding: EdgeInsets.only(top: 25),
                 child: DropdownButton<String>(
                   value: defacValue,
                   iconSize: 24,
@@ -59,7 +64,7 @@ class _BookRoomState extends State<BookRoom> {
                       defacValue = newValue;
                     });
                   },
-                  items: <String>['Air Conditioning', 'AC', 'Non-AC']
+                  items: <String>['Room Type', virtualDiv, 'AC', 'Non-AC']
                       .map<DropdownMenuItem<String>>((String value) {
                     return DropdownMenuItem<String>(
                       value: value,

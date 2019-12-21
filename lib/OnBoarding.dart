@@ -1,8 +1,7 @@
 import "package:flutter/material.dart";
 import 'package:mit_hostel/GuestSignIn.dart';
-import 'package:mit_hostel/GuestSignUp.dart';
 import 'package:mit_hostel/MitButton.dart';
-import 'package:mit_hostel/Otp.dart';
+import 'package:mit_hostel/OtpAuth.dart';
 import 'package:mit_hostel/UserSignIn.dart';
 
 class OnBoarding extends StatelessWidget {
@@ -80,7 +79,7 @@ class OnBoarding extends StatelessWidget {
                         ),
                         textColor: Colors.white,
                         buttonText: 'Sign Up',
-                        onTap: Otp(),
+                        onTap: OtpAuth(),
                         width: MediaQuery.of(context).size.width / 4,
                       ),
                     ],

@@ -3,7 +3,7 @@ import 'package:mit_hostel/BookRoom.dart';
 import 'package:mit_hostel/GuestSignIn.dart';
 import 'package:mit_hostel/GuestSignUp.dart';
 import 'package:mit_hostel/Payment.dart';
-import 'package:mit_hostel/onBoarding.dart';
+import 'package:mit_hostel/OnBoarding.dart';
 import 'package:mit_hostel/UserSignIn.dart';
 
 void main() => runApp(MyApp());
